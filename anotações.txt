@@ -1,0 +1,66 @@
+Html -> para colocar informações, não é uma linguagen de programação.
+Css -> estilização do site, não é uma linguagen de programação.
+Javascript ou outras linguagens de programação -> interação com o usuário e manipulação de dados.
+
+HTML:
+
+    cabeça = <head> ... </head>
+        É a cabeça do html serve para colocar comandos globais/configurações
+    
+    corpo = <body> ... </body>
+        É o corpo do html onde fica todo o conteúdo da página
+    
+    titulo do site - <title> Titulo </title>
+        Colocado na tag head, define o título que aparecerá na aba do navegador
+    
+    título = <h1> Título </h1>
+        <h1> - É oque inicia o título
+        </h1> - É oque fecha o título aberto
+        obs: tem como fazer títulos menores:
+            <h1> Maior </h1>
+            <h2> Menor </h2>
+            ... até o H6
+
+    parágrafo = <p> Parágrafo </p>
+        <p> - É oque começa um parágrafo no html
+        </p> - É oque fecha o parágrafo aberto
+
+    imagem = <img scr='foto.png' alt=''Exemplo de foto> 
+        <img - coemço para colocar a imagem 
+            scr - é para colocar onde a imagem vem e qual é ela dentro das aspas
+            alt - é para caso não carregue a foto ou não mostre ela, mostra a palavara dentro das aspas
+
+    Estrutura básica:
+        <!DOCTYPE html>
+        <html lang='pt-br'>
+            <head>
+                <meta charset='UTF-8'> #importante  para colocar palavaras em pt-br
+                <meta name="viewport"
+                content='width=device-width,
+                initial-scale=1.0'> # serve para clocar 100% da tela do site e clocar na distancia inicial ex: 100%
+                <title> Titulo </title>
+            </head>
+            <body>
+                <h1>Olá, Mundo!</h1>
+            </body>
+        </html>
+
+CSS:
+    Funciona por meio de seletores
+    Ex:
+        h1{
+            font-family: Arial;
+            font-size: 20pt;
+            color: blue;
+        }
+
+        h1 - seletor
+        "font-family: Arial", "font-size: 20pt", "color: blue" - Declaração
+        font-family, font-size, color - propriedade
+        Arial, 20pt, blue - Valor
+
+    font-family - declara qual a fonte da letra como por exemplo "Arial".
+    font-size - Declara em que tamanho será a fonte como por exemplo "20pt" ou "20px"
+        pt = pontos
+        px = pixels
+    color - Define a cor da letra como por exemplo "blue", "#358754"
