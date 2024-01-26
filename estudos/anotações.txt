@@ -90,7 +90,8 @@ HTML:
         Como colocar um ícone:
             <link rel="shortcut icon" href="igual a imagem colocar aonde o icone está" type="image/x-icon">
 
-
+        Hierarquia de Títulos:
+            basicamente é a forma que cada titulo fica no caso o titulo "h1" está na frete do "h2" e ele a frete d "h3" assim até o "h6"
 
 
 
