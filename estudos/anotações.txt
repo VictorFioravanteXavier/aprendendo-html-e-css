@@ -29,6 +29,9 @@ HTML:
         <img - coemço para colocar a imagem 
             scr - é para colocar onde a imagem vem e qual é ela dentro das aspas
             alt - é para caso não carregue a foto ou não mostre ela, mostra a palavara dentro das aspas
+    
+    linha horizontal = <hr> 
+        cria uma linha horizontal no site
 
     Estrutura básica:
         <!DOCTYPE html>
