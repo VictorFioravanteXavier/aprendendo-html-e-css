@@ -52,6 +52,31 @@ HTML:
     
     para colocar o símbolo "<" ou ">" em algum lugar de um parágrafo pode usar o comando "&lt;" para "<" e "&gl;" para ">"
 
+    Comentar em um código é o comando "<!-- Comentário --!>"
+
+    Símbolos:
+        &reg; = "®" marca registrada
+        &copy; = "©" direito autoral
+        &trade; = "™"marca registrada
+
+        Moedas: 
+            &euro; = "€" Euro
+            &pound; = "£" Libra
+            &yen; = "¥" Yen
+            &dollar; = "$" Dólar
+            &cent; = "¢" centavos
+        
+        &delta; = "Δ" delta
+        &uparrow; ou &uarr;= "↑" ceta para cima
+    
+    Emojis:
+        para colocar um emoji em um código você tem que adicionar "&#x" para falar que é um valor hexadecimal.
+
+        site para buscar os códigos de emojis é "https://emojipedia.org/vulcan-salute#technical"
+
+        &#x1F596; = 🖖
+        &#x1F913; = 🤓
+
 
 
 
