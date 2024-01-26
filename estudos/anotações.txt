@@ -76,6 +76,21 @@ HTML:
 
         &#x1F596; = 🖖
         &#x1F913; = 🤓
+    
+    Favicon:
+        É basicamente o ícone que mostra junto do nome do site como o ícone do youtube que aparece junto do nome YouTube no navegador 
+
+        é melhor usar arquivos ".ico" para fazer um ícone
+
+        sites uteis para ícones "IconArchive", "favicon.cc" e o "favicon.io":
+            IconArchive -> baixa icones já prontos e gratuitos
+            favicon.cc -> gera todos os tamanhos necessários para favicons e você pode desenhar seu ícone
+            favicon.io -> fazer upload do seu próprio ícone e ele te diz quais são as dimensões necessárias
+        
+        Como colocar um ícone:
+            <link rel="shortcut icon" href="igual a imagem colocar aonde o icone está" type="image/x-icon">
+
+
 
 
 
