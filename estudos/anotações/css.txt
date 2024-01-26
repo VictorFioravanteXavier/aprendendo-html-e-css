@@ -1,0 +1,22 @@
+Css -> estilização do site, não é uma linguagen de programação
+
+Funciona por meio de seletores
+Ex:
+    h1{
+        font-family: Arial;
+        font-size: 20pt;
+        color: blue;
+    }
+
+    h1 - seletor
+    "font-family: Arial", "font-size: 20pt", "color: blue" - Declaração
+    font-family, font-size, color - propriedade
+    Arial, 20pt, blue - Valor
+
+font-family - declara qual a fonte da letra como por exemplo "Arial".
+
+font-size - Declara em que tamanho será a fonte como por exemplo "20pt" ou "20px"
+    pt = pontos
+    px = pixels
+
+color - Define a cor da letra como por exemplo "blue", "#358754"
