@@ -4,6 +4,21 @@ Javascript ou outras linguagens de programação -> interação com o usuário e
 
 HTML:
 
+    Estrutura básica:
+        <!DOCTYPE html>
+        <html lang='pt-br'>
+            <head>
+                <meta charset='UTF-8'> #importante  para colocar palavaras em pt-br
+                <meta name="viewport"
+                content='width=device-width,
+                initial-scale=1.0'> # serve para clocar 100% da tela do site e clocar na distancia inicial ex: 100%
+                <title> Titulo </title>
+            </head>
+            <body>
+                <h1>Olá, Mundo!</h1>
+            </body>
+        </html>
+
     cabeça = <head> ... </head>
         É a cabeça do html serve para colocar comandos globais/configurações
     
@@ -32,21 +47,13 @@ HTML:
     
     linha horizontal = <hr> 
         cria uma linha horizontal no site
+    
+    quebra de linha no meio de um parágrafo  = <br>
+    
+    para colocar o símbolo "<" ou ">" em algum lugar de um parágrafo pode usar o comando "&lt;" para "<" e "&gl;" para ">"
 
-    Estrutura básica:
-        <!DOCTYPE html>
-        <html lang='pt-br'>
-            <head>
-                <meta charset='UTF-8'> #importante  para colocar palavaras em pt-br
-                <meta name="viewport"
-                content='width=device-width,
-                initial-scale=1.0'> # serve para clocar 100% da tela do site e clocar na distancia inicial ex: 100%
-                <title> Titulo </title>
-            </head>
-            <body>
-                <h1>Olá, Mundo!</h1>
-            </body>
-        </html>
+
+
 
 CSS:
     Funciona por meio de seletores
