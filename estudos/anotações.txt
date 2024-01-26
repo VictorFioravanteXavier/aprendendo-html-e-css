@@ -95,7 +95,9 @@ CSS:
         Arial, 20pt, blue - Valor
 
     font-family - declara qual a fonte da letra como por exemplo "Arial".
+
     font-size - Declara em que tamanho será a fonte como por exemplo "20pt" ou "20px"
         pt = pontos
         px = pixels
+    
     color - Define a cor da letra como por exemplo "blue", "#358754"
