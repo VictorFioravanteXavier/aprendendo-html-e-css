@@ -50,6 +50,8 @@ para colocar o símbolo "<" ou ">" em algum lugar de um parágrafo pode usar o c
 
 Comentar em um código é o comando "<!-- Comentário --!>"
 
+
+
 Símbolos:
     &reg; = "®" marca registrada
     &copy; = "©" direito autoral
@@ -65,6 +67,8 @@ Símbolos:
     &delta; = "Δ" delta
     &uparrow; ou &uarr;= "↑" ceta para cima
 
+
+
 Emojis:
     para colocar um emoji em um código você tem que adicionar "&#x" para falar que é um valor hexadecimal.
 
@@ -72,6 +76,8 @@ Emojis:
 
     &#x1F596; = 🖖
     &#x1F913; = 🤓
+
+
 
 Favicon:
     É basicamente o ícone que mostra junto do nome do site como o ícone do youtube que aparece junto do nome YouTube no navegador 
@@ -86,8 +92,12 @@ Favicon:
     Como colocar um ícone:
         <link rel="shortcut icon" href="igual a imagem colocar aonde o icone está" type="image/x-icon">
 
+
+
 Hierarquia de Títulos:
     basicamente é a forma que cada titulo fica no caso o titulo "h1" está na frete do "h2" e ele a frete d "h3" assim até o "h6"
+
+
 
 Formatação de Textos:
     Negrito / Destaque:
@@ -141,3 +151,163 @@ Formatação de Textos:
         <bdo dir="rtl">Exemplo</bdo> = para inverter o texto da direita para esquerda
 
         <bdo dir="ltr">Exemplo</bdo> = para inverter o texto da esquerda para direita
+
+
+
+Listas:
+    Listas Ordenadas:
+        são aquelas que a ordem faz diferença.
+        se faz usando o "ol" para a ordenar, e cada item com a tag "li".
+
+        <ol> 
+          <li>Item 1</li>
+          <li>Item 2</li>
+        </ol>  
+
+        #Saída
+            1. Item 1
+            2. Item 2
+
+        Outras coisas:
+            tem como colcoar o tipo da lista na frente dos itens, por exemplo:
+                1. Item 1
+                A. Item 1
+                a. Item 1
+                I. Item 1
+                i. Item 1
+            Usando o comando  "type", você pode mudar. Exemplo abaixo:
+                <ol type='A'>
+                    ...
+                </ol>
+            
+            Você também pode começar as listas em outro número, basta usar a tag "start":
+                <ol start='3' >
+                    ...
+                </ol>
+                #Saída
+                    3. Item 1
+                    4. Item 2
+            Lembrando que mesmo se for uma letra devera ser colocado o número que ele representa. Por exemplo:
+                <ol type='a'start='5'>
+                    <li>Item 1</li>
+                </ol>
+                # Saida
+                e. Item1
+
+
+    Listas não ordenadas:
+        Listas que não precisão ser ordenadas como por exemplo lsita de compras
+        se faz usando o "ul" para definir essa lista, e cada item é colocado entre as tags "li".
+
+        <ul>
+            <l1>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+
+        # Saida
+            ° Item 1
+            ° Item 2
+        
+        Usando o comando "type", você pode mudar a forma como os itens são numerados.
+        Por padrão ele usa um círculo ("•"), mas você pode escolher outros símbolos, por exemplo:
+            <ul type="circle">, <ul type="disc"> ou <ul type="square">
+           
+            
+    Lista de Definição:
+        Basicamente tu vai colocar uma lista que se inicia com "dl" e vai colcoar o temo para ser definido com "dt" e a definição com "dd"
+        As listas de definições são usadas quando queremos dar uma expansão sobre algum tema. 
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação para  a criação de um conteudo em um site.</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para a criação do design de um site</dd>
+            <dt>JavaScript</dt>
+            <dd>Linguagem de programação para criação de interatividade de um site.</dd>
+        </dl>
+        
+             
+
+Links:
+    links externos:
+        para colocar um iperlink em um texto basta usar a tag "<a>" e coloca-la no lugar do texto que deseja.
+        A tag "href" serve para indicar qual o endereço da url que vai redirecionar o link.
+
+        Exemplo:
+            <p>Clique <a href="https://www.google.com/">aqui</a>.</p>
+
+        É aconselhado a colcar as tags "target="_blank"", serve para ter um alvo em uma nova aba em branco no navegador, e "rel="external"", que é para mostrar que o link é para fora do site no caso externo
+
+        mais sobre target:
+            _blank vai abrir o link em uma nova janela em branco 
+            _self vai abrir o link na janela ou frame atual (padrão) 
+            _top vai desfazer todos os frames e abrir o destino no navegador completo 
+            _parent similar ao uso do _top em uma referência à janela mãe 
+            nome-do-frame caso esteja usando frames, indicar o nome da janela a abrir 
+        
+        mais sobre rel:
+            next indica que o link é para a próxima parte do documento atual 
+            prev indica que o link é para a parte anterior do documento atual 
+            author indica que é um link para o site do autor do artigo atual 
+            external indica que é um link para outro site que não faz parte do site 
+        
+    links internos:
+        é usando a mesma coisa que os links externos , mas precisamos adicionar um pouco mais de informações.
+        usando a mesma tag "a" podemos colcoar a direção do arquivo que queremos chamar.
+        
+        usamos o termo "next" para uma próxima página do nosso site e "perv" para uma página anterior.
+
+        para colcar algo que não esteja na mesma pasta basta colocar o caminho até o arquivo
+        e para voltar uma pasta é só usar o comando "../"
+
+    links para download:
+        É usando o mesmo comando dos outros o "a"
+        Adicionamos o atributo "download" e nele coloco o nome do arquivo
+        ou o "type" que pega no site "iana.org"
+
+
+Mídeas
+    Imagens dinâmicas:
+        saber que o usuario vai acessar o site em multiplos dispositivos e por isso tem que ter imagens dinâmicas para dar uma melhor experiência para ele.
+
+        dentro de uma tag "picture" temos tags "source" e "img".
+
+        source:
+            Usada para definir fontes de imagem alternativas. Se o browser não suporta ou com alguma definição posta no código. Tem que ser colocada da ordem menor para o maior
+            
+
+            Exemplo:
+                <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+
+            ela tem que ser usada junto com um "img" para funcionar.
+
+                max-width = é os px maximos que uma tela tem que ter para exibir a imagem dentro de "srcset".
+
+                srcset = é onde fica o nome da imagem que ele irá mostrar se a pessoa estiver com essas condições.
+
+                type =  é o tipo da imagem que vai aparecer.
+        
+    Áudio:
+        tem que colcoar primeiro colocar a tag "áudio" e dentro dela colocamos o "source" mas difente das imagens o para colcoar o junto da tag "src" que é onde colocamos o áudio
+
+        preload:
+            básicamante é se o site vai ter o áudio inteiro carregado ou apenas as primeiras partes.
+
+            none : Não pré-carrega nada, o áudio começa quando for chamado.
+
+            metadata : Carrega somente metadados (tamanho, duração etc)
+
+            auto : Carrega todo o áudio antes de começar a reproduzir.
+        
+        controls:
+            Mostra os controles do player como play, pause, volume entre outras coisas.
+        
+        loop:
+            Repetição do áudio sempre que terminar.
+        
+        autoplay:
+            Tenta reproduzir assim que possível.
+        
+        Mute:
+            Se estiver mudo ele reproduz sozinho sem som.
+
+        existem difentes tipos de mídea de áudio como mp3, ogg ou way sendo a ultima a mais pesada. E é especificada no type dentro do "source". Não é recomendado usar o way
