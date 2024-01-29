@@ -311,3 +311,33 @@ Mídeas
             Se estiver mudo ele reproduz sozinho sem som.
 
         existem difentes tipos de mídea de áudio como mp3, ogg ou way sendo a ultima a mais pesada. E é especificada no type dentro do "source". Não é recomendado usar o way
+
+    Vídeos:
+        São videos que vão aparecer no site. Não é recomendado deixar um vídeo muito grando sendo ospedado por todos os visitantes pois isso pode travar o servidor e consumir muita memoria.
+        Os Vídeos podem estar no formato ".mp4", ".m4v" ou "webm"
+
+        Vídeos em hospedagem própria:
+            para colocar um vídeo como hospedagem própria basta colocar detro da tag "video" e colocar dentro dos "soucers" o caminho completo do vídeo e seu tipo, também adicionar o "controls" para mostrar os controles para o usuario.
+
+            Exemplo:
+                <video width="500" controls poster="imagens/limoes-capa.png">
+                    <source src="midia/meu-video.mp4" type="video/mp4">
+                    <source src="midia/meu-video.m4v" type="video/m4v">
+                    <source src="midia/meu-video.webm" type="video/webm">
+                    <source src="midia/meu-video.ogv" type="video/ogv">
+                    <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+                </video>
+            
+            "poster" = serve para mostrar uma imagem enquanto o vídeo não foi reproduzido
+            "width"  = serve para colcar o tamanho do vídeo no site
+
+        Vídeos externos:
+            É a forma mais recomedada de colocar algum vídeo em um site pois você não precisa guardá-lo na sua hospedagem assim pagando menos.
+            
+            Vídeos do youtube/vimeo:
+                Para colcar algum vídeo do youtbe no seu site é uma fbem simples:
+                basta colocar para compartilhar clicar em incorporar e copiar o código.
+
+                Exemplo:
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BRuTnxjf2k8?si=wyh7mdii8pbF1bsD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                

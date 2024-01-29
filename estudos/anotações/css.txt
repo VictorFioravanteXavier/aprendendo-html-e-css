@@ -13,10 +13,62 @@ Ex:
     font-family, font-size, color - propriedade
     Arial, 20pt, blue - Valor
 
-font-family - declara qual a fonte da letra como por exemplo "Arial".
+font-family - declara qual a fonte da letra como por exemplo "Arial";
 
-font-size - Declara em que tamanho será a fonte como por exemplo "20pt" ou "20px"
+font-size - Declara em que tamanho será a fonte como por exemplo: "20pt" ou "20px";
     pt = pontos
     px = pixels
 
-color - Define a cor da letra como por exemplo "blue", "#358754"
+color - Define a cor da letra como por exemplo: "blue", "#358754";
+
+text-align - Alinha o texto por exemplo: justify;
+
+background-color - muda a cor do fundo do site por exemplo: lightskyblue;
+
+text-decoration - decora o texto do seletor por exemplo: underline;
+
+
+Estilos:
+    Pode se usar todos os tipos de estilos em um html sendo o "inline",  "locais" e "external" sendo nessa ordem de prevalencia.
+
+    CSS inline:
+        É o menos recomendado mas é uma base boa.
+        é básicamante colocar a css dentro do html, exemplo:
+            <h1 style="color: mediumblue;">Exemplo/h1>
+        É difícil de usar pois para cada alteração tipo nas tags "h1" você tera que mexer manualmete em todos os "h1" do html e por isso não é recomendado.
+
+
+
+    CSS locais ou internos:
+        É usado dentro do htlm também mas é usado de uma forma muito mais prática e organizada.
+        Que é colcoar a tag "style" dentro da tag head de um html.
+
+        Exemplo:
+            <head>
+                ...
+                <style>
+                    ...
+                <style>
+            <head>
+            ...
+        
+        Não é recomedada pois se tiver vários htmls você teria que digitar todos os estilos novamente.
+    
+
+
+    CSS externos:
+        É o estilo mais versatil e organizado, serve para separar as tags de estilos dos conteúdos.
+        Para usar esse método você precisa criar um arquivo .css e linká-lo no seu html com a tag link.
+
+        Exemplo:
+            <head>
+                ...
+                <link rel="stylesheet" href="style.css">
+            <head>
+        
+        
+
+Regras:
+    
+    @charset: UTF-8; -> Define qual será o charset padrão do documento.
+        UTF-8 = pode adicionar acentos e caracters especiais sem problemas.
