@@ -27,6 +27,40 @@ background-color - muda a cor do fundo do site por exemplo: lightskyblue;
 
 text-decoration - decora o texto do seletor por exemplo: underline;
 
+* - configurações globais para todos os elementos no html;
+
+height - é a altura que vai  ficar o elemento;
+
+background-image -  adiciona imagem de background.
+    linear-gradient(direção, começa, termina) - gradiente de cores; Exemplo:
+        direção:
+            fixas:
+                to top - de baixo para cima;
+                to left - da direita para esquerda;
+                to right - da esquerda para direita;
+                to bottom - de cima para baixo;
+            graus:
+                90deg - 90 graus;
+                45deg - 45 graus;
+                180deg - 180 graus; 
+            
+            tem como colocar as porcentagens também:
+                linear-gradient(to top,  red, yellow 50%, green) - nesse caso o amarelo está ocupando metade da tela no caso 50%;
+
+
+
+    radio-gradient(direção, começa, meio, termina); 
+        direções:
+            circle – sentido circular;
+            ellipse – sentido elíptico;
+        
+
+background-attachment - define como a imagem deve estar relacionada com o restante do documento.
+    fixed - Fixa a imagem na tela e não segue o scroll;
+    scroll - A imagem segue o scroll do site;
+    local - A imagem fica onde está definida;
+
+
 
 Estilos:
     Pode se usar todos os tipos de estilos em um html sendo o "inline",  "locais" e "external" sendo nessa ordem de prevalencia.
@@ -72,3 +106,73 @@ Regras:
     
     @charset: UTF-8; -> Define qual será o charset padrão do documento.
         UTF-8 = pode adicionar acentos e caracters especiais sem problemas.
+    
+
+
+Cores:
+    são muito importantes para a apresentação de um site. Para manter o usuário nele é bom colocar uma cor que combine com o que está desejando.
+    Para pegar cores que sejas armonicas pode usar o AdobeColor, Paletton.com  
+
+    Colocando cores no CSS:
+        Por nome:
+            É colcoar no nome da cor como por exemplo: red, blue, green...
+            tem que ser em inglês.
+            Exemplo:
+                background-color: blue; 
+                color: white;
+        
+        Por Hexadecimal:
+            Como funciona o Hexadecimal:
+                (R)(R)(G)(G)(B)(B), RRGGBB ou RGB - Ele é composto por 6 dígitos hexadecimais. De 0 até f.
+                    R = red
+                    G = green
+                    B = blue
+                As primeiras duas casas representam a quantidade de vermelho na cor.
+                As próximas duas casas são verde e as últimas duas são azul.
+                para respresentar a quantidade de vermelho, verde ou azul vai de 00 até ff.
+                    0 = 0
+                    f = 250
+                o maximo é o f e o mínimo é o 0.
+            
+            É colocar o código rgb no css assim:
+                background-color: #0000ff; = blue
+                color: #ffffff; = white
+            isso são as mesmas cores do exemplo anterior mas com o rgb.
+        
+        Uando o comando rgb:
+            é da mesma forma que o Hexadecimal mas sem usar os hexadecimais, por exemplo:
+                background-color: rgb(0, 0, 250); = blue
+                color: rgb(250, 250, 250); = white
+            essas cores representam  um valor entre 0 e 100% de cada cor.
+            mas sem usar o a, b, c, d e f dos hexadecimais somente usando decimais para dar as cores.
+        
+        Representação por HSL(Hue, Saruration, Luminosity):
+            O HSL é uma escala de cores onde a cor é definida pelos seguintes valores:
+                H = Hue - grau da cor
+                S = Satúration - saturação da cor
+                L = Luminance - luminescência da cor
+            
+            Para se usar o HSL no CSS você precisa usar o comando hsl() e passar os três parâmetros separados por virgulas.
+            Aqui está como se expressa:
+                background-color: hsl(0, 100%, 50%); = blue
+                color: hsl(0, 0%, 100%); = white
+            Nesse caso o Hue é 0 graus, o Saturation é 100% e o Lightness é 50%.
+            Isso significa que a cor será completamente azul.
+            
+
+
+Degardê:
+    para colocar um degardê no site utilizamos o comando "background-image: linear-gradient(direção, começa, meio, termina)":
+        Exemplo:
+            background-image: linear-gradient(to top, white, blue);
+    tem como colcar diferntes formas como circulo, etc usando o "radio-gradient(direção, começa, meio, termina)"
+        radio-gradient: (circle, white, blue);
+    
+
+Fontes:
+    As fontes são importantes para passar a mensagem que deseja antes da pessoa ler ela e também dixar mais bonita.
+        Serif - Fonte com serifa.
+        Sans-serif - Fonte sem serifa.
+        Monospace - Letras muito uniformes.
+        Courier New - Fonte mais antiga.
+    Para colcar uma fonte em um elemento use a propriedade "font-family" e coloca a fonte desejada. 

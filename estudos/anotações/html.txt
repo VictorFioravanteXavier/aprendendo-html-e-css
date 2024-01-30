@@ -52,6 +52,7 @@ Comentar em um código é o comando "<!-- Comentário --!>"
 
 
 
+
 Símbolos:
     &reg; = "®" marca registrada
     &copy; = "©" direito autoral
