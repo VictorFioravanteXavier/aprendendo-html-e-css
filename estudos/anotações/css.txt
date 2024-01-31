@@ -176,3 +176,168 @@ Fontes:
         Monospace - Letras muito uniformes.
         Courier New - Fonte mais antiga.
     Para colcar uma fonte em um elemento use a propriedade "font-family" e coloca a fonte desejada. 
+
+
+
+    Tamanhos:
+        Medidas absolutas:
+            Elas são o cm, mm, in(polegada), px, pt, pc(paica).
+                cm, mm e in - Não são recomedadas a usar pois pode se ter telas de tamanho diferentes, então a apresentação vai estar diferente do desejado.
+                px - Pode não ser a melhor escolha pois existem telas que 1px é 1/4px no caso as de retina.
+                pt e pc - Não são recomedadas para se usar em matriais que serão exibidos em telas pois são medidas da tipografia de papel. 
+        Medidas relativas:
+            Elas em, ex, rem, vw, vh e % existem outros tipo de medidas mas o recomendado é o "em":
+                em = medida relativa ao temanho atual da fonte;
+                ex = relativa a autura x de uma fonte;
+                rem = tipo o "em" só que é a fonte retaiva ao root no caso a fonte configurada no body;
+                vw =  viewport width ou largura do visor do dispositivo;
+                vh = Viewport Height ou altura do visor do dispositivo;
+        
+        O tamnho da fonte geralmete no navegadores são de "16px" e "1em" equivale a exatamnete a "16px", então considerando isso "2em = 32px".
+        para colocar o tamnho de uma fonte é recomendado usar o "em" pois ele veio pensado pra isso usar o tamanho da fonte para mudar o dele.
+
+
+
+    Peso:
+        É basicamente a quantidade de espessura que a letra terá na fonte se usa o comando "font-weight: ;". 
+
+        Peso com palavaras chave:
+            Lighter - Menos negrito que o texto normal;
+            Normal - Texto normal;  
+            Bold - Texto em negrito;
+            Bolder - Mais negrito que o texto Bold;
+        Peso com variações numéricas:
+            vai de 100 em 100 até 900:
+                100 - Extra Light;
+                200 - Light;
+                300 - Book;
+                400 - Regular;
+                500 - Medium;
+                600 - SemiBold;
+                700 - Bold;
+                800 - Extra Bold;
+                900 - Black;
+            nem sempre todos os pesos estão disponíveis em todas as fontes.
+    
+
+
+    Estilos:
+        Pode se misturar com o Peso e é para colcar por exemplo em Italico usando o comando "font-style: ;"
+    
+
+
+    Sublinhado:
+        O sublinhado serve para destacar um texto como se fosse hyperlink mas sem ser um link. Usamos o comando "text-decoration: underline;"
+            O sublinhado é feito pelo comando "text-decoration: underline;"
+
+
+    Shorthand:
+        É para colocar todas as propriedades da fonte em uma linha, separadas por ponto e vírgula ";", como abaixo:
+            - font-style -> font-weight -> font-size -> font-family
+        É usado para simplificar os comandos.
+        se usa os seguintes exemplos: 
+            font-family: "Work Sans", sans-serif;
+            fornt- weight: bold;
+            font- size: 3em;
+            font-style: italic;
+            
+             ao invez  de digitar tudo acima, basta usar apenas:
+
+            font: italic bold 3em "Work Sans", sans-serif;
+    
+
+
+    Google fonts:
+        Entrando nesse site podemos encontrar várias fontes grátis que são carregadas diretamente do servidor da google. E São uma opção muito boa para quem não tem a fonte baixada no computador do cliente ou que quer ter mais de uma fonte num projeto.
+        Você vai utilizar esse tipo de fontes externas colcoando uma regra de import "@" no css e a referência da fonte.
+        Clicar nela e selecionar o estilo que deseja. Para cada fonte você tera que colocar um "@import"
+    
+
+
+    Externas ou baixadas:
+        Se baixa em sites externos como o google fonts, dafont.com, etc. Quando baixadas podem vir com difentes formatos e cada navegador pode ser compativel com o formato ou não os tipos de formatos são:
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype
+            - truetype-aat(Apple Advanced Typography)
+            - svg
+        Elas também são colocadas por meio de regras do css "@" é a "@font-face{}" dentro dessa regra se coloca "src: url('') format('')" podendo ter mais urls que funcionam da seguinte maneira:
+            @font-face{
+                font-family: 'Aqui você declara o nome que a fonte vai ter';
+                src: url('Aqui se coloca onde está o arquivo da fonte') format('Aqui se coloca o formato do arquivo ex. opentype')
+            }
+
+        Exemplo:
+            @font-face {
+            font-family: Love;
+            src: url(fontes/love\ larry\ ttf.ttf) format(truetype);
+            font-weight: normal;
+            font-style: normal;
+            }
+    
+
+
+    Alinhando textos:
+        Você pode alinhar o texto com relação à linha ou ao elemento pai. usando a propriedade "text-align". Exemplos: 
+            Text-align: left | right | center | justify;
+
+        Também tem como deixar o texto com identação usando a propriedade "text-ident". Exemplos:
+            text-indent: 30px;
+            text-indent: 2em;
+
+        E mudar o espacamento entre as linhas usando a propriedade "line-height". Exemplo:
+                line-height: 1.6;
+
+
+
+Seletores Personalizados:
+    ID:
+        Para declarar um id em HTML, basta usar o atributo "id=" no elemento que você quer dar o id. e para chamar esse id em css basta colocar "#" e o nome do identificador escolhido. Exemplo:
+            HTML
+                <h1 id="principal">Exemplo</h1>
+            CSS:
+                h1{
+                    color: rgb(0, 71, 0);
+                }
+
+                h1#principal{
+                    text-align: center;
+                }
+            Então a cores dos meus h1 vão ser rgb(0, 71, 0) e estaram descentralisadas, mas meus h1 com a class "#principal" ficará centralizado na página e em verde.
+            A limietação id é que só pode haver um no html todo 
+    
+    Class:
+        Para usar uma class em HTML basta adicionar um atributo "class" na tag correspondente. E para chamar essa class em css basta colocar "." e o nome da classe escolhida.
+        É basicamente a mesma coisa o id mas podem ter vários na página.
+        também tem como colocar a tag "class" dentro de uma "p" usando a tag "span", assim podendo usar a mesma cor para múltiplas palavras.
+        pode se colocar outras classes dentro a tag "class" usando um espaço para separar elas.
+    
+    Pseudo-classes:
+        Funciona quase exatamnete como os outros acima mas a forma que ele funciona é se o elemento é  ou não em uma condição específica.
+        São estados de um elemento HTML e são chamadas por meio do nome da classe seguido dos dois pontos (:).
+            :link - Link sem ser clicado.
+            :visited - Link que foi visitado.
+            :hover - Poderia ser clicado mas não está sendo.
+            :active - O botão esta sendo clicado.
+            :focus – Elemento que possui o foco do mouse (input).
+    
+    Pseudo-elementos:
+        São uma propriedade de CSS que permite adicionar estilos a elementos que não existem no HTML.
+            ::before – Adiciona conteúdo antes da tag.
+            ::after – Adiciona conteúdo depois da tag.
+            ...
+        Exemplo:
+            a::after{
+                content: "[link]";
+                text-decoration: none;
+                font-weight: normal;
+                color: darkgray;
+            }
+            Basicamente depois de todos os links vai aparecer [link] e isso não está no html e sim no css.
+        
+
+
+
+
+Modelos de caixas:
+    
