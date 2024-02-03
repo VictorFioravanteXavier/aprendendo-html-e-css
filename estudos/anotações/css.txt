@@ -340,4 +340,158 @@ Seletores Personalizados:
 
 
 Modelos de caixas:
+    São muito usadas no HTML e no CSS pois assim fica mais fácil organizar as informações. Pode se ter várias caixas dentro de outras caixas.
+        para modificar a altura de caixas utilizamos a propriedade "height" e a largura utilizamos a propriedade "width";
+            height = altura
+            width = largura
+
+    Um "h1" pode ser considerando uma caixa assim como um "p" ou qualquer outra coisa em html.
+
+    Para colocar uma borda em uma caixa se utiliza a propriedade "border" e para colocar mais espaço interno da informação utilizamos "padding" e o externo "margin". Para fazer um tracejado sobre a borda no caso fora do elemento se utiliza a propriedade "outline";
+        border  – Define as linhas que rodeiam a caixa.
+            border-width =   define a espessura das linhas.
+            border-style =  define o estilo das linhas:
+                solid =  Linha sólida.
+                dashed = Linha tracejada.
+                dotted = Linha pontilhada.
+            border-color = Cor das linhas.
+              ou
+            border: (espessura) (estilo) (cor);
+
+        padding – Espaçamento entre a borda e o conteúdo.
+            padding-top(topo), right(direita), bottom(baixo), left(esquerda) = Especificam a quantidade de espaço para cada lado individualmente.
+              se colocar somente 1 número de parametro ele aplica para todas as margens.
+            padding: 10px;
+              Se colocar  dois números ele aplica na vertical e horizontalmente.
+            padding: 10px 5px;
+
+        margin  – Espaçamento entre a margem e a próxima caixa;
+            margin-top,  right, bottom, left = Especificam a posição da margem naquela direção. 
+            margin: auto; =  Centraliza horizontalmente.
+            para colcoar a "margin" centralizada e botar mais marge em cima e abaixo usando o shorthand:
+                margin: 10px autp 10px auto;
+                10px é a margem superior e inferior e auto é a margem esquerda e direita.
+
+        outline – Linha que rodeia o border da caixa.
+
+            outline-color = Cor da linha.
+            outline-width = Espessura da linha.
+            outline-style = Estilo da linha (solid, dashed etc).
     
+    Tipos de caixa:
+        Box-level:
+            É o tipo que vai pular uma linha e começar na coluna seguinte, é sempre inline. É uma caixa isolada quando é declarada ele vai pular uma linha e ir até o final da tela e depois que termina o box ele pula para linha de baixo; Exemplo:
+                div - é usando quando quero quebrar a linha e fazer um box que ocupa a largura inteira
+            
+        Inline-level:
+            Nunca pula linha e tenta ficar dentro da linha anterior. Ele não pula linha ocupa o espaço que precisa e depois dá continuidade ao conteudo na mesma linha;
+                span - É usada quando quer colcar uma caixa em uma linha e continuar o conteúdo
+    
+        Display:
+            block – O elemento fica no bloco acima e abaixo. Exemplo: h1, p, div.
+            inline – O elemento fica ao lado do proximo. Exemplo: span, a, strong.
+            none – Não exibe nada.
+            inline-block – Permite que os elementos estejam dentro deles mas não são como os bloco.
+
+    Grouping Tags:
+        Antigamente só se usava "div" para a separção de determinadas partes dos sites mas hoje em dia o desejável a se usar é "header"(cabeçalho), o "main"(a parte principal do site) e o "footer"(rodapé). Todos citados são considerdos "divs" mas para a organização do site é melhor que se use eles. 
+            header  = cabeçalho -  Usado para definir o cabeçalho do site.
+            nav     = barra de navegação - Usado para criar a barra de navegação do site.
+            main    = principal – Define a área principal do documento.
+            section = Divide o documento em seções.
+            aside   = Lado – Usado para inserir informações relacionadas à parte principal do documento.
+            footer  = rodapé – Usado para inserir informações referentes ao rodapé do site.
+        Continua usando div não cria dor de cabeça para si
+    
+    Sombra nas Caixas:
+        Serve para dar um efeito de sombra na imagem ou texto.
+        box-shadow: (horizontal) (vertical) (blur(embaçamento)) (spread(espalhamento)) (color);
+    
+    Caixas com vértices arredondados:
+        Serve para dar um arredondamento nos cantos das caixas.
+        border-radius: tl tr bl br (top left / top right / bottom left / bottom right );
+          ou
+        border-radius: 5px; /* Todos os lados */
+          ou
+        border-radius: 5px 3px; meche apenas os cantos direitos e esquerdos. (5px está mechendo no canto superior esquerdo e canto inferior direito) (3px está mechendo  no canto superior direito e no inferior esquerdo)
+     
+     Borda personalizada:
+        básicamante é uma forma de personalizar a borda de seu site ao seu bel prazer.
+            border-image-source: url("caminho_da_imagem");
+            border-image-slice: 20%; /* Valor percentual */
+            border-iamge-repeat: repeat;
+
+
+
+Variaveis em CSS:
+    funciona colocando variaveis especificas antes da propriedade que você deseja utilizar.
+    Por Exemplo:
+        :root{
+            --cor0: #c5ebd6;
+            --cor1: #83e1ad;
+            --cor2: #3ddc84;
+            --cor3: #2fa866;
+            --cor4: #1a5c37;
+            --cor5: #063d1e;
+        }
+        Isso define se eu chamar a cor0 vai retornar  #c5ebd6, assim por diante.
+        
+    Então no css eu posso usar isso dessa maneira:
+        .caixa {
+            background-color: var(--cor1);
+        }
+
+    Tem que usar o "root" e as "--" para definir as variáveis globais, pois elas podem ser chamadas em qualquer lugar do documento.
+
+
+
+Responsividade:
+    O objetivo da responsividade é tornar o design do site adaptável e flexível para diferentes dispositivos e resoluções de tela.
+    A responsividade é o processo pelo qual um website se adapta às diferentes dimensões do dispositivo em que está sendo visualizado.
+
+
+
+Transições:
+    Serve para colcar a duração da duração  das mudanças nas animações e transições do site.
+    Formato: 
+            transition: <propriedade> <tempo>;
+                Propriedades: all (todas as propriedades), opacity, color, transform, filter, visibility, background-position, width, height, margin, padding etc..
+              ou pode colcar só o tempo;
+            transition-duration: 0.5s;
+
+
+
+Listas:
+    List-style-type: 'código da imagem/emoji' -> mmuda o sinal da frente da lista
+    
+    coluns: ; -> é para colocar a quatidade de colunas que a lista vai ter.
+
+    list-style-position : inside | outside; -> serve para saber onde ficará o sinal da lista (dentro ou fora)
+        -inside: o sinal fica dentro da caixinha da lista;
+        -outside: o sinal fica fora da caixinha da lista
+
+
+
+Vídeo Responsivo:
+    Serve para colocar um vídeo na página web e deixá-lo responsivo.
+      div.video{
+            position: relative;
+        }
+            - A propriedade position: relative; é usada para especificar que o posicionamento dos elementos filhos dentro deste contêiner será relativo ao próprio elemento "div.video".
+
+        div.video > iframe{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+        }
+            - position: absolute;: Isso faz com que o elemento <iframe> seja posicionado absolutamente em relação ao seu contêiner pai com position: relative; (definido anteriormente).
+
+            - top: 5%;: O elemento <iframe> será posicionado 5% para baixo a partir do topo do seu contêiner pai.
+
+            - left: 5%;: O elemento <iframe> será posicionado 5% para a direita a partir da borda esquerda do seu contêiner pai.
+
+            - width: 90%;: O elemento <iframe> ocupará 90% da largura do seu contêiner pai.
+
+            - height: 90%;: O elemento <iframe> ocupará 90% da altura do seu contêiner pai.
