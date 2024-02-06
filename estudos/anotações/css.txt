@@ -287,6 +287,30 @@ Fontes:
 
         E mudar o espacamento entre as linhas usando a propriedade "line-height". Exemplo:
                 line-height: 1.6;
+    
+
+
+
+    Transformando as letras:
+        Você pode converter para maiúsculas ou minúsculas.
+                
+            Maiúsculas:
+                text-transform: uppercase;
+
+                Para deixar as letras maiúsculas e com as letras que já estavam maiúsculas maiores que as outras:
+                    font-variant: samal-caps;
+                
+            Minúsculas:
+                text-transform: lowercase;
+
+
+    
+    Resposividade:
+        utilizamos a tag normal que é a "font-size" mas em vez de colocarmos "1em" por exemplo podemos colocar basiado na largura da tela Exemplo:
+            font-size: 10vw;
+            vw  = viewport width (largura do dispositivo)
+            
+            O valor de 1vw é igual ao da largura da janela do navegador, por isso se o tamanho da janela for alterado,
 
 
 
@@ -420,6 +444,23 @@ Modelos de caixas:
             border-image-source: url("caminho_da_imagem");
             border-image-slice: 20%; /* Valor percentual */
             border-iamge-repeat: repeat;
+    
+    Centralização vertical de caixas:
+        Alinha o conteudo da caixa centralizado verticalmente se utiliza a propriedade.
+            position:  absolute;
+            top: 50%;
+            left: 50%
+            transform: translate(-50% -50%);
+
+            position - a caixa de fora o caso a que ela está posicionada será relativo a essa posição. Por exemplo: Se você usar position: relative; A caixa ficará relativa a esse espaço.
+            top - coloca o topo na linha onde eu quiser "do topo para baixo".
+            left - coloca o começo na linha onde eu quiser "da esquerda para direita".
+            transform - serve para mover as coisnas para fora dos limites normais. 
+                    translate(-50%, -50%) move todos os valores para fora, mas ele precisa saber quantos pixels foram movidos no eixo x e y. E esse ta servindo para centralizar o ponto de apoio no centro da caixa em vez do canto superior direito.
+                       
+         
+
+    
 
 
 
@@ -472,7 +513,7 @@ Listas:
 
 
 
-Vídeo Responsivo:
+Vídeo ou imagem Responsivo:
     Serve para colocar um vídeo na página web e deixá-lo responsivo.
       div.video{
             position: relative;
@@ -495,3 +536,95 @@ Vídeo Responsivo:
             - width: 90%;: O elemento <iframe> ocupará 90% da largura do seu contêiner pai.
 
             - height: 90%;: O elemento <iframe> ocupará 90% da altura do seu contêiner pai.
+    
+
+
+Colocando uma imagem de fundo no seu site:
+    Pode se colcoar muitos tipos de imagens as chapadas, degrade, por url, etc.
+
+    Chapada:
+        É colocar uma cor só  pra dar um background.
+        
+        Exemplo:
+            .caixa {
+                background: #white;
+            }
+
+
+    Degrade:
+        É  quando você coloca várias cores e agradas e ela vai mostrando uma a uma conforme a visibilidade.
+
+        Exemplo:
+             .caixa {
+                 background: linear-gradient(to bottom, red, yellow, green);
+             }
+             
+
+
+    Por URL:
+        Você pode usar qualquer tipo de imagem que esteja em algum lugar na internet ou em seu computador. Basta informar o caminho completo para a imag
+
+        Exemplo:
+            .caixa {
+                background-image: url("caminho_da_sua_imagem");
+            }
+            Colocamos diretamente aqui o caminho da nossa imagem para que fique como background.
+            Pode colocar imagens externas mas te torna um refém caso a imagem for removida ou muda de lugar.
+    
+        Todos citados podem ser usados no body, div, etc.
+    
+
+
+    Pode mudar tambem o quanto elas repetem  com:
+        background-repeat: repeat | repeat-x | repeat-y | no-repeat;
+            - Repeat : Repete tanto horizontal quanto verticalmente.
+            - Repeat-X : Repete apenas na horizontal.
+            - Repeat-Y : Repete apenas na Vertical.
+            - No-Repeat : Não repete nenhuma vez.
+    
+
+
+    Pode mudar a posição da imagem  com:
+        background-position: [left | right | center] || [top | bottom | center];
+            - Left / Right / Center : Posiciona a imagem do lado esquerdo/direito/centro.
+            - Top / Bottom / Center : Posiciona a imagem na parte superior/inferior/central.
+
+        background-position: coluna linha;  - como funciona
+
+
+
+    Pode mudar o tamanho delas com:
+        background-size: auto | length | cover | contain ;
+            - auto : Deixar a imagem na sua proporção original.
+            - Length : Define a largura e altura em pixels.
+            - Cover : A imagem preenche todo o container sem cortes.
+            - Contain : A imagem preenche todo o container mantendo a proporção
+    
+
+
+    Pode se vincular com o conteudo do site básicamnete um vículo: 
+        background-attachment: scroll | fixed | local;
+            - Scroll : O padrão é o scroll normal.
+            - Fixed : Fica fixa na tela, não scrolla junto com o site.
+            - Local : É como fixed mas a imagem segue as mudanças de scrolling
+
+
+
+    Shorthand:
+        Ordem:
+            color > image > position > repeat > [size] > attachment
+            [size] - não funciona mas está na documetação que pode ser feito assim.
+
+        Pode se usar  assim:
+            background: color image position repeat attachment;
+            
+            background: Black url() center center no-repeat fixed;
+
+
+
+    Imagens com efeito Parallax simples:
+        1) Criar uma div para a imagem e outra para o texto.
+        2) Colocar a imagem como background da div de imagens.
+            E o texto dentro da div de textos.
+        3) Usar a propriedade "background-attachment" e definir ela como fixed.
+            Assim a imagem ficará fixa na tela e não irá parar de movimentar enquanto o usuário rolar a pagina.
