@@ -628,3 +628,7 @@ Colocando uma imagem de fundo no seu site:
             E o texto dentro da div de textos.
         3) Usar a propriedade "background-attachment" e definir ela como fixed.
             Assim a imagem ficará fixa na tela e não irá parar de movimentar enquanto o usuário rolar a pagina.
+
+        Isso faz com que a imagem fique fixa na tela e o scroll afete apenas o texto.
+
+    

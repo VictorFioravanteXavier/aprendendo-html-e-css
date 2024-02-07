@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    display: inline-block;
+    border-collapse: collapse;
+
+}
+
+caption{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 10px;
+}
