@@ -473,3 +473,79 @@ Tabelas:
                 inherit - Usa a configuração herdada do elemento pai;
                 
             Overflow-x ou y - Especifica qual eixo deve mostrar a barra de rolagem;
+    
+
+
+iframe:
+    É um frame em line por isso do i na frente do frame;
+
+
+    E é usado para colocar um instancia de um outro site no seu site no caso uma "janela" no seu site que dá para outro site:
+        <iframe src="link do site" frameborder="borda que teu iframe vai ter geralmete 0"></iframe>
+    
+
+    Existem sites que são protegidos por iframes tipo o site do google;
+
+
+    Oque tiver dentro das tags do iframe só vai aparecer se não tiver conpatibilidade do site. Então geralmete colocamos o link dentro de uma tag a para ter uma referência de que site estamos refencioando no iframe;
+
+
+    Tamanho padrão:
+        300x150px
+            300 = largura
+            150 = altura
+    
+        Para mudar o tamanho usamos os comandos height e width dentro das tags tudo em px mas tambem pode usar css que são sobrenas no controle de largura e altura. No caso oque fica como 'padrão' são as css;
+
+
+    scrolling:
+        é se tem barra de rolagem na pagina dentro do iframe;
+            scrolling comandos: 
+                auto = vai colcar automaticamente
+                yes  = sempre vai ter uma barra de rolagem
+                no   = não vai ter uma barra de rolagem mesmo   se o conteudo tiver uma mas pode não funcionar em certos navegadores;
+
+
+    frameborder:
+        é o tamanho da borda que vai ter nosso iframe em px ou pode fazer em css normalmente
+
+
+    Para abrir um iframe de um conteúdo próprio é só colocar o caminho do documento:    
+        <iframe src="pag001.html" frameborder="0" height="500" width="500"></iframe>
+    
+
+    Para navegar em páginas com a tag a utilizando o iframe:
+         <iframe src='' name="frame" id="tela">
+             <p>infelizmente sue navegador não é compativel</p>
+         </iframe>
+        O iframe tera um nome e a tag a vai ter um target nesse nome;
+         <a href="paginas-extras/pag001.html" target="frame">Primeira página</a>
+        Assim podendo ter várias páginas em só um iframe;
+
+        Ele tem um problema que quando iniciado ele fica em branco se nada ni iframe mas tem duas maneiras de resolver isso:
+
+            1° - É colocar um dos links no src do iframe:
+                 <iframe src='paginas-extras/pag001. html' name="frame" id="tela">
+                     <p>infelizmente sue navegador não é compativel</p>
+                 </iframe>
+            
+            2° - É usar o atributo srcdoc que é como se fosse um arquivo html que pode ser escrito:
+                 <iframe srcdoc='<h1>Escolha uma das opções a cima</h1> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus error ullam et est officia quas eaque nisi unde deleniti tempore possimus quam maiores beatae odio autem mollitia nesciunt, ab qui.</p>' name="frame" id="tela">
+                     <p>infelizmente sue navegador não é compativel</p>
+                 </iframe>
+                Nele pode se escriver em html mas não é recomedado
+
+
+    Tornando um iframe seguro:
+        Tem várias maneira de deixar o iframe mais seguro:
+
+            1° - Uando o sandbox='allow-same-ori' isso faz com que o site refencioando não capture nenhuma ação;
+                 <iframe src="paginas-extras/pag004.html" sandbox="sandbox"></iframe>
+            
+            2° - Usando o referrerpolicy="no-referrer" que faz com que o site refencioando não vai coletar nenhum dado do usuário;
+                 <iframe src="paginas-extras/pag004.html" sandbox="sandbox" referrerpolicy="no-referrer"></iframe>
+            
+            3° - tem como deixar o sandbox um pouco "menos" seguro usando permições que você define;
+                sandbox="allow-same-origin" - só vai liberar arquivos da mesma origem que ele;
+
+                sandbox="allow-forms allow-scripts" - vai liberar os formularios e os scripts;
