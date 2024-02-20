@@ -549,3 +549,211 @@ iframe:
                 sandbox="allow-same-origin" - só vai liberar arquivos da mesma origem que ele;
 
                 sandbox="allow-forms allow-scripts" - vai liberar os formularios e os scripts;
+    
+
+
+Formularios:
+    São caixas para inserir textos;
+
+
+
+    Para desativar os dados que aparecem se usa:
+         autocomplete="off"
+        Dentro da tag <form>
+
+
+
+    Para iniciar um formulario se usa as tags:
+         <form>...</form>
+
+
+
+    action='':
+        É uma ação que funciona quando se clica em submit;
+
+
+
+    Labels:
+        São usadas para refenciar um palavara em um input
+
+        Exemplo:
+            <p>
+                <label for="iname">Nome:</label> 
+                <input type="text" name="name" id="iname">
+            </p>
+        
+        Ele tá refencioando a tag input para o nome usando seu id; Então sempre que tiver uma label com o for usamos o id
+    
+
+
+    Colocar um input:
+         <form action="">
+             <p>Nome: <input type="text" name="name"></p>
+             <p>Sobrenome: <input type="text" name="sobrenome"></p>
+             <p><input type="submit" value="enviar"></p>
+         </form>
+         Metodos do input:
+            type="...":
+                text     = texto livre;
+                submit   = botão que libera os valores dos inputs;
+                password = Os dados colocados dentro da caixa não ficam viziveis ;
+                reset    = cria um botão que limpa as caixas de imputs;
+                number   = Só aceita colocar números e traços; 
+                month    = É para colcar meses e anos: ano-mes;
+                date     = É para colocar datas mais especificas com dia, mes e ano: ano-mes-dia;
+                time     = É para colocar horas: hora:minutos; 
+                tel      = É para colocar telefones;
+                email    = É para colcar emails;
+                checkbox = É uma caixa que pode marcar true ou false; Pode ter várias
+                radio    = É uma caixa que pode ser marcado sómente 1 e eles tem que ter o mesmo name; Tem que passar o value que ele tem
+                cor      = É para o usuário definir uma cor; Retorna o código hexadecimal da cor
+                range    = É uma barra que Retorna: nivel=(escolha usuario); Pode ser personalizada o padrão é 0 a 100
+                file     = É um botão que pode ser anexado um arquivo; E uma especicação que ele tem é que o form tem que estar no post
+                
+
+
+            name="...":
+                serve para representar uma coleção de valores, enviados através de um formulário, para o servidor, Serve mais para HTML e PHP;
+                Exemplo:
+                    name = 'nome'
+
+                    name = 'username'
+            
+
+            id="...":
+                Serve para identificar sómente o objeto especifico e serve mais para o JavaScript;
+
+
+            value="...":
+                É oque vai aparecer dentro do botão, ou alguma váriavel pre determinada
+            
+
+            required:
+                É para configurar que um campo é obrigatório no html
+            
+
+            minlength="...":
+                É o minimo de letras que pode ter no seu input;
+
+
+            maxlength="...":
+                É o maximo de letras que pode ter no seu input
+            
+
+            size="...":
+                ele determina quantas letras que vão ser mostardas po vez no seu input, pode passar dele;
+
+            
+            placeholder="...":
+                Ele mostra uma dica de que deve ser colocado na box como:
+                    placeholder="Nome do usuário"
+
+
+            autocomplete="...":
+                Serve para facilitar a vida do usuário ao digitar algo poder ser que ele já tenha salvo exemplos de autocomplete:
+                    username = Nome de usuario;
+                    current-password = Senha já cadastrada;
+                    new-password = Nova Senha;
+            
+
+            min, max e step:
+                min e max geralmete são usados para type='number' são um limitador;
+
+                    Exemplo:
+                        min='1'
+                        max='3'
+
+                        O menor número que pode ser colocado é 1 e o maior é 3
+                
+                step é como esse número vai aumentando:
+                    
+                    Exemplo:
+                        step='0.5'
+
+                        1 => 1.5 => 2 => 2.5 => 3
+            
+            checked:
+                Para deixar uma checkbox ou um radio já marcado;
+
+
+
+
+    Metodos:
+        Por padrão o html já coloca o metodo GET;
+
+        method="get ou post"
+
+        Get = Mostra os envios na url não é protegido
+            Se usa o metodo get quando é uma busca ou são dados que não precisam ser protegidos; Tendo um limite de 3000 bytes no caso 3000 letras;
+        Post = Só não mostra na url e não é protegido
+            Se usa o metodo post quando são dados mais sensiveis de mostar para o publico CPF, CEP< CNPJ nessa vaibe; se os dados passaram de 300, bytes e tambem envios de arquivos
+    
+
+    Select, Datalist e Textarea:
+        São uma forma de inserir dados usando ou não o input;
+
+        Select:
+            É a forma de fazer uma lista pré determina com dados fixos:
+
+                Exemplo:
+                    <select name="estado" id="iestado">
+                        <optgroup label="Região Sudeste">
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+
+                        <optgroup label="Região Nordeste">
+                            <option value="MA">Maranhão</option>
+                            <option value="PE">Pernanbuco</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                        </optgroup>
+                    </select>
+            
+        Datalist:
+            É uma forma de colcar comandos usados no input em forma de lista:
+
+                Exemplo:
+                    <input type="text" name="prof" id="iprof" list="listaprof">
+                    <datalist id="listaprof">
+                        <option value="PROF">Professor</option>
+                        <option value="DEV">Desenvolvedor</option>
+                        <option value="ADM">Administrador</option>
+                    </datalist>
+            
+        Textarea:
+            É uma forma de colocar um grande input sem limitação de tamanho, sem usar css.
+
+                Exemplo:
+                    <label for="imsg">Mensagem</label><br>
+                    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+                
+                cols = quantas letras vai ter antes de ter quebra de linha;
+                rows = qual vai ser a quantidade de linhas no caso a altura;
+        
+        option = é a onde vai ser inserido o valor atribuido/retornado a escolha e a palavra que vai aparecer para o usuario;
+
+        optgroup = faz um grupo com o option tem que escrever o nome do grupt em um comando label dentro do optgroup;
+
+        
+        Output:
+            É a forma de mostar dados para o usuário
+
+            Exemplo:
+                <p>
+                    <label for="in1">Numero 1</label>
+                    <input type="number" name="n1" id="in1" min="0" max="50" required oninpuT='isoma.innerHTML = Number(in1.value) + Number(in2.value)'>
+                    
+                </p>
+
+                <p>
+                    <label for="in2">Numero 2</label>
+                    <input type="number" name="n2" id="in2" min="0" max="50" required oninpuT='isoma.innerHTML = Number(in1.value) + Number(in2.value)'>
+                </p>
+
+                <p>
+                    <label for="isoma">Soma</label>
+                    <output name='soma' id="isoma">0</output>
+                </p>
+            
+            oninput = caso mude ele executa o comando entre aspas;
